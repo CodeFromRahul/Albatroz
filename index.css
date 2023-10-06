@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+*::selection{
+    color: black;
+    background-color: white;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+
+}
+
+
+ nav{
+    /* background-color: black; */
+    /* width: 100vw; */
+    /* height: auto; */
+        /* position: fixed; */
+    z-index: 900;
+    height: 72px;
+    border-bottom: 2px dotted  	#010100;
+
+    background-color: white;
+
+
+ }
+
+ 
+
+ .container a{
+    font-size: 22px;
+    font-weight: 900;
+    font-family: Canopee;
+
+ }
+
+ .container ul{
+    font-family: Domain Disp Cond Medium ;
+
+ }
+ .container ul li{
+    font-weight: 800;
+    font-size: 22px;
+    margin: 2vw;
+    color: white;
+ }
+ .container img{
+    margin: 2vw;
+    width: 50px;
+    height: 52px;
+ }
+ #nav-part2{
+    margin-right: 32px;
+    background-color: white;
+    margin: 12px 32px;
+    padding: 12px 32px;
+    border-radius: 50px;
+
+ }
