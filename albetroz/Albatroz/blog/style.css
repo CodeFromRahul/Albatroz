@@ -1,0 +1,192 @@
+/* NFT Blog Platform Styles with Animations, Purple Gradient, Glass Morphism, and Parallax Scrolling */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #69686b, #e1e0e3);
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+.shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.shape1 {
+  width: 150px;
+  height: 150px;
+  top: -50px;
+  left: -100px;
+  animation: shape1Animation 6s linear infinite;
+}
+
+.shape2 {
+  width: 100px;
+  height: 100px;
+  top: -100px;
+  right: -50px;
+  animation: shape2Animation 5s linear infinite;
+}
+
+.shape3 {
+  width: 200px;
+  height: 200px;
+  bottom: -150px;
+  left: -150px;
+  animation: shape3Animation 4s linear infinite;
+}
+
+@keyframes shape1Animation {
+  0% {
+    transform: translate(-100px, -50px) rotate(0);
+  }
+  100% {
+    transform: translate(-100px, -50px) rotate(1turn);
+  }
+}
+
+@keyframes shape2Animation {
+  0% {
+    transform: translate(0, -100px) rotate(0);
+  }
+  100% {
+    transform: translate(0, -100px) rotate(-1turn);
+  }
+}
+
+@keyframes shape3Animation {
+  0% {
+    transform: translate(-150px, -150px) rotate(0);
+  }
+  100% {
+    transform: translate(-150px, -150px) rotate(1turn);
+  }
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+section {
+  margin: 40px 0;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  animation: slideIn 1s ease-in;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #FF69B4;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+  box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.5);
+}
+
+button:hover {
+  background-color: #FF1493;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Additional NFT-themed styles */
+
+h1 {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.7);
+}
+
+footer {
+  color: #fff;
+}

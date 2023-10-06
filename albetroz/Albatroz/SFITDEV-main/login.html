@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>DEVELOPERS!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">SFIT DEV</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="/about.html">About <span class="sr-only">(current)</span></a>
+              </li> <li class="nav-item active">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <strong>Courses</strong> 
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login</title>
+</head>
+<body>
+    
+ <div class="container">
+    <div class="box">
+        <!------------------ Login Box --------------------->
+        <form method="post" action="login.php">
+        <div class="box-login" id="login">
+            <div class="top-header">
+                <h3>Hello, Again</h3>
+                <small>We are happy to have you back.</small>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="text" class="input-box" name="email" id="logEmail" required>
+                    <label for="logEmail">Email address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input-box" name="password" id="logPassword" required>
+                    <label for="logPassword">Password</label>
+                     <div class="eye-area">
+                            <div class="eye-box" onclick="myLogPassword()">
+                                <i class="fa-regular fa-eye" id="eye"></i>
+                                <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
+                            </div>
+                     </div>
+                </div>
+                <div class="remember">
+                    <input type="checkbox" id="formCheck" class="check">
+                    <label for="formCheck"> Remember Me</label>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="input-submit" value="Log In">
+                </div>
+                <div class="forgot">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+    </form>
+     <!-------------------- Register --------------------------->
+      <form method="post" action="config.php">
+     <div class="box-register" id="register">
+        <div class="top-header">
+            <h3>Sign Up, Now</h3>
+            <small>We are happy to have you with us.</small>
+        </div>
+        <div class="input-group">
+            <div class="input-field">
+                <input type="text" class="input-box" name="username" id="regUser" required value="">
+                <label for="regUser">Username</label>
+            </div>
+            <div class="input-field">
+                <input type="text" class="input-box" name="email" id="regEmail" required value="">
+                <label for="regEmail">Email address</label>
+            </div>
+            <div class="input-field">
+                <input type="password" class="input-box" name="password" id="regPassword" required value="">
+                <label for="regPassword">Password</label>
+                 <div class="eye-area">
+                        <div class="eye-box" onclick="myRegPassword()">
+                            <i class="fa-regular fa-eye" id="eye-2"></i>
+                            <i class="fa-regular fa-eye-slash" id="eye-slash-2"></i>
+                        </div>
+                 </div>
+            </div>
+            <div class="remember">
+                <input type="checkbox" id="formCheck-2" class="check">
+                <label for="formCheck-2"> Remember Me</label>
+            </div>
+            <div class="input-field">
+                <input type="submit" class="input-submit" value="Sign In">
+            </div>
+            
+        </div>
+    </div>
+</form>
+    <!------------------------ Switch -------------------------->
+      
+    <div class="switch">
+        <a href="#" class="login" onclick="login()">Login</a>
+        <a href="#" class="register" onclick="register()">Register</a>
+        <div class="btn-active" id="btn"></div>
+    </div>
+    </div>
+ </div>
+<script>
+     var x = document.getElementById('login');
+     var y = document.getElementById('register');
+     var z = document.getElementById('btn');
+ 
+     function login(){
+        x.style.left = "27px";
+        y.style.right = "-350px";
+        z.style.left = "0px";
+     }
+     function register(){
+        x.style.left = "-350px";
+        y.style.right = "25px";
+        z.style.left = "150px";
+     }
+   // view password codes
+   
+   
+   function myLogPassword(){
+    var a = document.getElementById('logPassword');
+    var b = document.getElementById('eye');
+    var c = document.getElementById('eye-slash');
+    if(a.type === "password"){
+        a.type = "text"
+        b.style.opacity = "0";
+        c.style.opacity = "1";
+    }else{    
+        a.type = "password"
+        b.style.opacity = "1";
+        c.style.opacity = "0";
+    }
+   }
+   
+   
+   function myRegPassword(){
+var d = document.getElementById('regPassword');
+var b = document.getElementById("eye-2");
+var c = document.getElementById("eye-slash-2");
+if(d.type === "password"){
+    d.type = "text"
+    b.style.opacity = "0";
+    c.style.opacity = "1";
+}else{    
+    d.type = "password"
+    b.style.opacity = "1";
+    c.style.opacity = "0";
+}
+}
+</script>
+</body>
+</html></a>
+                <a class="dropdown-item" href="#">Web Development</a>
+                <a class="dropdown-item" href="#">App Development</a>
+                <a class="dropdown-item" href="#">Machine Learning</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Another course</a>
+              </div>
+            </li>
+                <a class="nav-link" href="/contact.html">Contact Us <span class="sr-only">(current)</span></a>
+              </li>
+           
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="mx-2">
+          <button class="btn btn-success" class="nav-link" href="/login.html">Login</button>
+
+          <button class="btn btn-success" href="register2.html">Sign up</button>
+        </div>
+      </nav>
+      <body>
+        <link rel="stylesheet" href="login.css">
+        <section class="vh-100 gradient-custom">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                  <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+          
+                      <div class="mb-md-5 mt-md-4 pb-5">
+          
+                        <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                        <p class="text-white-50 mb-5">Please enter your login and password!</p>
+          
+                        <div class="form-outline form-white mb-4">
+                          <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                          <label class="form-label" for="typeEmailX">Email</label>
+                        </div>
+          
+                        <div class="form-outline form-white mb-4">
+                          <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                          <label class="form-label" for="typePasswordX">Password</label>
+                        </div>
+          
+                        <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+          
+                        <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+          
+                        <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                          <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                          <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                          <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                        </div>
+          
+                      </div>
+          
+                      <div>
+                        <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
+                        </p>
+                      </div>
+          
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      </body>
+      
+      <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>© 2022-2023 SFIT DEV, Inc... <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      </footer>
+     
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

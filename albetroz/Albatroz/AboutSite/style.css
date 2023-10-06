@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;800;900&display=swap");
+
+@font-face {
+  font-family: "Crazy Rascals";
+  src: url("//db.onlinewebfonts.com/t/9c48dc9a936a42c233eb8d7853063a39.eot");
+  src: url("//db.onlinewebfonts.com/t/9c48dc9a936a42c233eb8d7853063a39.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/9c48dc9a936a42c233eb8d7853063a39.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/9c48dc9a936a42c233eb8d7853063a39.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/9c48dc9a936a42c233eb8d7853063a39.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/9c48dc9a936a42c233eb8d7853063a39.svg#Crazy Rascals")
+      format("svg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+/*   outline: 2px solid red; */
+}
+
+.story{
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.findout {
+  top: 0;
+  left: 0;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.findout section {
+  position: absolute;
+  min-height: 100vh;
+  width: 10}
+
+.findout h1, .story h1 {
+  font-family: "Crazy Rascals";
+  font-size: 10vw;
+  color: white;
+  text-align: center;
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+  padding-top: 26vw;
+}
+
+.findout h2, .story h2 {
+  color: white;
+  font-family: "Raleway";
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+.findout p {
+  font-family: "Raleway";
+}
+
+/*  introduction */
+.introduction {
+  background-color: black;
+  min-height: 100vh;
+}
+
+/*  facts */
+.facts {
+  background-color: white;
+  min-height: 100vh;
+}
+
+.facts h1 {
+  color: #c5c284;
+  font-family: "Raleway";
+  letter-spacing: -3px;
+  font-weight: bold;
+  margin-top: 70px;
+  font-size: 85px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 12px;
+  text-align: left;
+}
+
+.facts li {
+  color: black;
+  font-family: "Raleway";
+  font-size: 1.6vw;
+  line-height: 4vw; 
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 80px;
+}
+
+/*  reasons */
+.reasons {
+  background-color: white;
+  min-height: 100vh;
+}
+
+.reasons h1 {
+  color: #c5c284;
+  font-family: "Raleway";
+  letter-spacing: -3px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 70px;
+  font-size: 85px;
+  padding-top: 35px;
+  padding-left: 12px;
+  padding-bottom: 10px;
+}
+
+.reasons ul {
+  color: black;
+  font-family: "Raleway";
+  font-size: 1.6vw;
+  line-height: 4vw; 
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 80px;
+}
+
+/* benefits */
+.benefits {
+  background-color: white;
+  min-height: 100vh;
+}
+
+.benefits h1 {
+  color: #c5c284;
+  font-family: "Raleway";
+  letter-spacing: -3px;
+  font-weight: bold;
+  margin-top: 70px;
+  font-size: 85px;
+   padding-top: 35px;
+  padding-left: 12px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.benefits ul {
+  color: black;
+  font-family: "Raleway";
+  font-size: 1.6vw;
+  line-height: 4vw; 
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 80px;
+}
+
+/* what */
+.what {
+  background-color: #c5c284;
+  min-height: 100vh;
+  border: 20px solid white;
+}
+
+.what h1 {
+  color: white;
+  font-family: Raleway;
+  font-weight: bold;
+  padding-top: 22vw;
+}
+
+.what button {
+  align: center;
+  text-align: center;
+  font-size: 3vw;
+  color: #e7e6ba;
+  background-color: #9c9b75;
+  font-family: "raleway";
+  font-weight: bold;
+  padding: 1.4vw;
+  margin-top: 1.2vw;
+}
+
+/* ways */
+.ways {
+  background-color: white;
+  min-height: 100vh;
+}
+
+.ways h1 {
+  color: #c5c284;
+  font-family: "Raleway";
+  letter-spacing: -3px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 70px;
+  font-size: 85px;
+  padding-top: 35px;
+  padding-left: 12px;
+  padding-bottom: 10px;
+}
+
+.ways li {
+  font-size: 1.6vw;
+  line-height: 4vw; 
+  margin-left: 80px;
+  color: black;
+  font-family: "Raleway";
+  list-style-type: disc;
+  list-style-position: inside;
+} 
+
+/* done */
+/* .ways {
+  background-color: #9c9b75;
+  max-height: 100vh;
+  padding-top: 45px;
+  top: 100vh;
+} */
+
+/* .ways div{
+  min-height: 100vh;
+} */
+
+/* .done h2, 
+.done p {
+  font-family: "Raleway";
+  display: inline;
+  line-height: 6vw;
+}
+  
+.done h2 {
+  color: #c5c284;
+  font-weight: bold;
+  font-size: 6vw;
+  padding-left: 1.5vw;
+} */
+
+/* banana */
+.fullscreen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index:1;
+  pointer-events: none;
+}
+
+.banana {
+  display: block;
+  position: absolute;
+  width: 48vw;
+  left: 50%;
+  transform: translateX(-50%) rotate(1.5deg);
+}
+
+.bananas{
+  position: relative;
+  top: 3vw;
+}

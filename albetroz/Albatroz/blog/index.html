@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - NFT BLOG</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Albatroz Blog Sharing Platform</title>
+</head>
+<body>
+  <header>
+    <h1>Albatroz Blog Sharing Platform</h1>
+  </header>
+
+  <section>
+    <h2>Latest Blog Posts</h2>
+    <div id="blogPosts">
+      <!-- This is where the dynamically generated blog posts will appear -->
+    </div>
+  </section>
+
+  <section>
+    <h2>Create a New Blog Post</h2>
+    <form id="blogForm">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="content">Content:</label>
+      <textarea id="content" name="content" required></textarea>
+
+      <label for="nftImage">Blog image:</label>
+      <input type="file" id="nftImage" name="nftImage" accept="image/*" required>
+
+      <button type="submit">Publish</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Powered by Pixlab.co</p>
+  </footer>
+
+  <script>
+    // JavaScript functionality goes here
+    const blogForm = document.getElementById('blogForm');
+    const blogPostsContainer = document.getElementById('blogPosts');
+
+    blogForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const title = document.getElementById('title').value;
+      const content = document.getElementById('content').value;
+      const nftImage = document.getElementById('nftImage').value;
+
+      // Here you can implement the logic to create and store the blog post with the NFT image
+
+      // Once the blog post is created, you can dynamically add it to the blogPostsContainer
+      const blogPostElement = document.createElement('div');
+      blogPostElement.innerHTML = `
+        <h3>${title}</h3>
+        <p>${content}</p>
+        <img src="${nftImage}" alt="NFT Image">
+      `;
+
+      blogPostsContainer.appendChild(blogPostElement);
+
+      // Clear the form fields
+      blogForm.reset();
+    });
+  </script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
