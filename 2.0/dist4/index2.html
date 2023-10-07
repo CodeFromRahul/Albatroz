@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="flex-nav">
+  <!-- Navigation code remains the same -->
+</nav>
+<main>
+  <div class="container">
+    <div class="grid second-nav">
+      <!-- Breadcrumb navigation code remains the same -->
+    </div>
+    <div class="grid product">
+      <div class="column-xs-12 column-md-7">
+        <div class="product-gallery">
+          <div class="product-image">
+            <?php
+            // Replace with your database credentials
+            $servername = "your_server";
+            $username = "your_username";
+            $password = "your_password";
+            $dbname = "your_database";
+
+            // Replace with the actual product ID
+            $productId = 1;
+
+            // Create a connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            // Query to fetch product image URL
+            $sql = "SELECT image_url FROM products WHERE id = $productId";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $imageURL = $row["image_url"];
+            } else {
+                // Default image URL
+                $imageURL = "https://source.unsplash.com/W1yjvf5idqA";
+            }
+
+            $conn->close();
+            ?>
+            <img class="active" src="<?php echo $imageURL; ?>">
+          </div>
+          <!-- Image list code remains the same -->
+        </div>
+      </div>
+      <div class="column-xs-12 column-md-5">
+        <?php
+        // Create a new connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Query to fetch product details
+        $sql = "SELECT name, price, description FROM products WHERE id = $productId";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $productName = $row["name"];
+            $productPrice = $row["price"];
+            $productDescription = $row["description"];
+        } else {
+            // Default product details
+            $productName = "Bonsai";
+            $productPrice = "$19.99";
+            $productDescription = "The purposes of bonsai...";
+        }
+
+        $conn->close();
+        ?>
+
+        <h1><?php echo $productName; ?></h1>
+        <h2><?php echo $productPrice; ?></h2>
+        <div class="description">
+          <p><?php echo $productDescription; ?></p>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+      </div>
+    </div>
+    <div class="grid related-products">
+      <div class="column-xs-12">
+        <h3>You may also like</h3>
+      </div>
+      <?php
+      // Create a new connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+
+      // Check connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+
+      // Query to fetch related products
+      $sql = "SELECT image_url, name, price FROM related_products";
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+              $relatedImageURL = $row["image_url"];
+              $relatedProductName = $row["name"];
+              $relatedProductPrice = $row["price"];
+              ?>
+
+              <div class="column-xs-12 column-md-4">
+                <img src="<?php echo $relatedImageURL; ?>">
+                <h4><?php echo $relatedProductName; ?></h4>
+                <p class="price"><?php echo $relatedProductPrice; ?></p>
+              </div>
+
+              <?php
+          }
+      }
+
+      $conn->close();
+      ?>
+    </div>
+  </div>
+</main>
+<footer>
+  <!-- Footer code remains the same -->
+</footer>
+<!-- partial -->
+<script src="./script.js"></script>
+</body>
+</html>
